@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.iset.words">
+    package="com.MoetazZaghdoudiMohammedAmineSmeti.words">
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Words"
         tools:ignore="AllowBackup">
-        <activity
-            android:name="MoetazZaghdoudiMohammedAmineSmeti.iset.words.DetailActivity"
-            android:exported="false"
-            android:parentActivityName="MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity" />
         <activity
             android:name="MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity"
             android:exported="true">

@@ -1,4 +1,4 @@
-package com.iset.words
+package com.MoetazZaghdoudiMohammedAmineSmeti.words
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package MoetazZaghdoudiMohammedAmineSmeti.iset.words.adapter
+package com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
-import MoetazZaghdoudiMohammedAmineSmeti.iset.words.DetailActivity
+import com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.WordListFragment
 import android.content.Intent
 import android.net.Uri
-import com.iset.words.R
+import com.MoetazZaghdoudiMohammedAmineSmeti.words.R
 
 /**
  * Adapter for the [RecyclerView] in [DetailActivity].
@@ -69,7 +69,7 @@ class WordAdapter(private val letterId: String, context: Context) :
         // Set the text of the WordViewHolder
         holder.button.text = item
         holder.button.setOnClickListener {
-            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            val queryUrl: Uri = Uri.parse("${WordListFragment.SEARCH_PREFIX}${item}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             context.startActivity(intent)
         }

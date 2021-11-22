@@ -1,15 +1,17 @@
-package MoetazZaghdoudiMohammedAmineSmeti.iset.words.adapter
+package com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.adapter
 
-import MoetazZaghdoudiMohammedAmineSmeti.iset.words.DetailActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
-import MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity
+import com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity
+import com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.WordListFragment
 import android.content.Intent
-import com.iset.words.R
+import androidx.navigation.findNavController
+import com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.LetterListFragmentDirections
+import com.MoetazZaghdoudiMohammedAmineSmeti.words.R
 
 /**
  * Adapter for the [RecyclerView] in [MainActivity].
@@ -50,11 +52,9 @@ class LetterAdapter :
         val item = list[position]
         holder.button.text = item.toString()
         holder.button.setOnClickListener{
-            val context = holder.view.context
-            val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
+            holder.view.findNavController().navigate(action)
 
-            context.startActivity(intent)
 
         }
     }

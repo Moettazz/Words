@@ -1,4 +1,4 @@
-package com.iset.words
+package com.MoetazZaghdoudiMohammedAmineSmeti.words
 
 import org.junit.Test
 
