@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Words"
         tools:ignore="AllowBackup">
         <activity
-            android:name="MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity"
+            android:name="com.MoetazZaghdoudiMohammedAmineSmeti.iset.words.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
